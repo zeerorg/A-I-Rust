@@ -9,7 +9,7 @@ pub struct Jugs {
 }
 
 impl Jugs {
-    fn new(jug_a: i32, jug_b: i32, max_a: i32, max_b: i32) -> Jugs {
+    pub fn new(jug_a: i32, jug_b: i32, max_a: i32, max_b: i32) -> Jugs {
         Jugs {
             max_a: max_a,
             max_b: max_b,
@@ -85,12 +85,14 @@ mod tests {
         assert_eq!(fill_b(start_jug.clone()), Jugs::new(2, 4, 3, 4));
     }
 
+    #[test]
     fn empty_test() {
         let start_jug = Jugs::new(2, 2, 3, 4);
-        assert_eq!(empty_a(start_jug.clone()), Jugs::new(2, 0, 3, 4));
-        assert_eq!(empty_b(start_jug.clone()), Jugs::new(0, 2, 3, 4));
+        assert_eq!(empty_b(start_jug.clone()), Jugs::new(2, 0, 3, 4));
+        assert_eq!(empty_a(start_jug.clone()), Jugs::new(0, 2, 3, 4));
     }
 
+    #[test]
     fn trn_test() {
         let start_jug1 = Jugs::new(2, 4, 3, 5);
         assert_eq!(trn_a_to_b(start_jug1.clone()), Jugs::new(1, 5, 3, 5));
