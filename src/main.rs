@@ -1,5 +1,6 @@
 mod algo {
-    pub mod dfs;   
+    pub mod dfs;
+    pub mod bfs;
 }
 
 mod problems {

@@ -15,7 +15,7 @@ pub fn dfs<T: PartialEq + Hash + Eq + Clone + Display> (start: &T, goal_function
         let to_visit = open.pop();
         match to_visit {
             Some(val) => {
-                print!("{} ", val);
+                // print!("{} ", val);
                 if visited.contains(&val) {
                     continue;
                 }
