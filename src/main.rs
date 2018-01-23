@@ -1,10 +1,16 @@
 mod algo {
     pub mod dfs;
     pub mod bfs;
+    pub mod dfid;
 }
 
 mod problems {
     pub mod water_jug;
+    pub mod eight_puzz;
+}
+
+mod helper {
+    pub mod node;
 }
 
 fn main() {
