@@ -2,11 +2,13 @@ mod algo {
     pub mod dfs;
     pub mod bfs;
     pub mod dfid;
+    pub mod tic_tac_toe_algo;
 }
 
 mod problems {
     pub mod water_jug;
     pub mod eight_puzz;
+    pub mod tic_tac_toe;
 }
 
 mod helper {
